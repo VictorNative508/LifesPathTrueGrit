@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dj8kqyaesqki0"]
+
+[ext_resource type="PackedScene" uid="uid://xk0kg021mwqn" path="res://Scenes/main_menu.tscn" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://whvukebxn1o4" path="res://Skripts/UI/main_menu.gd" id="2_3dryh"]
+[ext_resource type="Texture2D" uid="uid://ca2shmr63ayc6" path="res://Assets/Images/mainmenubackground.png" id="2_wrm1d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
+bg_color = Color(0.42611408, 0.65497476, 0.44402567, 0.91600007)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="Game" type="Node" unique_id=580997290]
+
+[node name="MainMenu" parent="." unique_id=1034636113 instance=ExtResource("1_qxrlw")]
+script = ExtResource("2_3dryh")
+
+[node name="Background" type="Sprite2D" parent="MainMenu" unique_id=1574745264]
+position = Vector2(968, 547)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_wrm1d")
+
+[node name="Menu" type="Control" parent="MainMenu" unique_id=1046182222]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/Menu" unique_id=27618958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="InnerBackground" type="PanelContainer" parent="MainMenu/Menu/MarginContainer" unique_id=772509868]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3dryh")
+
+[node name="InnerContainer" type="VBoxContainer" parent="MainMenu/Menu/MarginContainer/InnerBackground" unique_id=2022254888]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=2133041047]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="MarginContainer" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=559024971]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Button" type="Button" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer/ButtonContainer" unique_id=1286047396]
+layout_mode = 2
+theme_type_variation = &"CustomMenuButton"
+text = "New Game"
+
+[node name="Control4" type="Control" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=275291915]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer2" type="MarginContainer" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=1672850514]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Button" type="Button" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer/ButtonContainer2" unique_id=558562569]
+layout_mode = 2
+theme_type_variation = &"CustomMenuButton"
+text = "Load Game"
+
+[node name="Control2" type="Control" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=747928524]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer3" type="MarginContainer" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=1832583438]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Button" type="Button" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer/ButtonContainer3" unique_id=2055761072]
+layout_mode = 2
+theme_type_variation = &"CustomMenuButton"
+text = "Quit"
+
+[node name="Control" type="Control" parent="MainMenu/Menu/MarginContainer/InnerBackground/InnerContainer" unique_id=62167954]
+layout_mode = 2
+size_flags_vertical = 3

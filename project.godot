@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Left, Right?"
-run/main_scene="uid://0kfqqes4rfui"
+run/main_scene="uid://dj8kqyaesqki0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/Images/icon.svg"
 
@@ -20,9 +20,20 @@ config/icon="res://Assets/Images/icon.svg"
 EventController="*uid://eqx6v5160dy7"
 GameController="*uid://b3lphpq8aeos3"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://boglkpk7yyf7a"
 
 [input]
 
